@@ -10,8 +10,8 @@
     <!-- Le styles -->
     <link href='http://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
     <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -26,7 +26,6 @@
     <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
 
     <script type="text/javascript">
-
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-35796697-1']);
       _gaq.push(['_trackPageview']);
@@ -36,59 +35,45 @@
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
-
     </script>
   </head>
 
-  <body data-spy="scroll" data-target=".bs-docs-sidebar">
-
+  <body>
     <!-- Navbar
     ================================================== -->
-<!--     <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container-fluid">
-          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="brand" href="./index.html">Caress</a>
-          <div class="nav-collapse collapse">
-            <ul class="nav pull-right">
-              <li class="active">
-                <a href="http://erickryski.com/caress-client/">Fork me</a>
-              </li>
-            </ul>
-          </div>
+    <div class="navbar navbar-transparent">
+      <div class="">
+        <div class="container">
+          <ul class="nav nav-pills pull-right">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/examples">Examples</a></li>
+            <li><a href="#docs">Docs</a></li>
+            <li><a href="https://github.com/ekryski/caress-server">Server</a></li>
+            <li><a href="https://github.com/ekryski/caress-client">Client</a></li>
+          </ul>
         </div>
       </div>
-    </div> -->
-
+    </div>
     <div id="wrap">
       <div class="container">
         <div class="row">
-          <div class="span12">
+          <div class="span6">
             <img src="img/caress-logo.png">
           </div>
         </div>
         <div class="row">
-          <div class="span9 offset3">
+          <div class="span12">
             <h3 class="tagline">Because all browsers want to be touched...</h3>
           </div>
         </div>
         <div class="row">
-          <div class="hero-unit">
-            <div class="row">
-              <div>
-                <a href="#" class="thumbnail">
-                  <img src="http://placehold.it/400x280" alt="">
-                </a>
-              </div>
-            </div>
+          <div class="span6 offset3">
+            <iframe width="100%" height="315" src="http://www.youtube.com/embed/q-ZVhy9tTBo" frameborder="0" allowfullscreen></iframe>
+          </div>
           </div> <!-- ./hero-unit -->
         </div>
-        <div class="row">
-          <div class="social span6 offset3">
+        <!-- <div class="row">
+          <div class="span6 offset3">
             <ul class="social-buttons">
               <li>
                 <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=ekryski&amp;repo=caress-client&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
@@ -104,9 +89,9 @@
               </li>
             </ul>
           </div>
-        </div><!-- ./row -->
+        </div> --><!-- ./row -->
         <div class="row">
-          <div class="hero-unit">
+          <div class="span12">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam fringilla eros nec mauris ullamcorper ut ullamcorper dui euismod. Fusce vitae lacus eros, eget dictum urna. Praesent pulvinar auctor varius. Fusce sem orci, aliquam quis suscipit vel, scelerisque a lorem. In nisl est, egestas et ornare sed, consectetur sed erat. Nam et eleifend metus. Integer quis ipsum lacus. Fusce non scelerisque augue. Donec non odio lorem, eu dignissim nunc.</p>
 
             <p>Mauris ut justo a odio porta gravida. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse dapibus ligula ac mauris auctor fringilla. Suspendisse potenti. Duis nunc sem, scelerisque vel iaculis quis, euismod eget arcu. Praesent varius pretium mauris a dignissim. Vestibulum feugiat velit ac nisl convallis in malesuada turpis accumsan.</p>
@@ -130,16 +115,167 @@
         <p>Code is <a href="https://github.com/ekryski/caress-client/blob/master/LICENSE" target="_blank">MIT Licensed</a>.</p>
       </div>
     </footer>
-
-
+    <canvas id="canvas" width="800" height="600">Get a better browser. You are missing out!</canvas>
 
     <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="js/underscore-1.3.3.min.js"></script>
+    <script type="text/javascript" src="js/socket.io-0.9.10.min.js"></script>
+    <script type="text/javascript" src="js/caress-0.1.0.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
     </script>
+    <script>
+        $(function() {
+            window.client = new Caress.Client({
+                host: 'localhost',
+                port: 5000
+            });
+            client.connect();
+        });
+    </script>
+    <script>
+      var ongoingTouches = new Array;
 
+      function colorForTouch(touch) {
+        var id = touch.identifier;
+        var letters = '0123456789ABCDEF'.split('');
+        var color = '#';
+        for (var i = 0; i < 6; i++ ) {
+            color += letters[Math.round(Math.random() * 15)];
+        }
+        return color;
+      }
+
+      function ongoingTouchIndexById(idToFind) {
+        for (var i=0; i<ongoingTouches.length; i++) {
+          var id = ongoingTouches[i].identifier;
+
+          if (id == idToFind) {
+            return i;
+          }
+        }
+        return -1;    // not found
+      }
+
+      function handleStart(evt) {
+        evt.preventDefault();
+        var el = document.getElementById("canvas");
+        var ctx = el.getContext("2d");
+        var touches = evt.changedTouches;
+
+        for (var i=0; i<touches.length; i++) {
+          var touch = touches[i];
+          touch.color = colorForTouch(touch);
+          ongoingTouches.push(touch);
+          ctx.strokStyle = touch.color;
+          ctx.fillRect(touch.pageX-2, touch.pageY-2, 4, 4);
+        }
+      }
+
+      function handleMove(evt) {
+        evt.preventDefault();
+        var el = document.getElementById("canvas");
+        var ctx = el.getContext("2d");
+        var touches = evt.changedTouches;
+
+        ctx.lineWidth = 4;
+
+        for (var i=0; i<touches.length; i++) {
+          var newTouch = touches[i];
+          var idx = ongoingTouchIndexById(newTouch.identifier);
+          var currentTouch = ongoingTouches[idx];
+          
+          newTouch.color = currentTouch.color;
+          ctx.strokeStyle = currentTouch.color;
+          ctx.beginPath();
+          ctx.moveTo(currentTouch.pageX, currentTouch.pageY);
+          ctx.lineTo(newTouch.pageX, newTouch.pageY);
+          ctx.closePath();
+          ctx.stroke();
+          ongoingTouches.splice(idx, 1, newTouch);  // swap in the new touch record
+        }
+      }
+
+      function handleEnd(evt) {
+        evt.preventDefault();
+        var el = document.getElementById("canvas");
+        var ctx = el.getContext("2d");
+        var touches = evt.changedTouches;
+
+        ctx.lineWidth = 4;
+
+        for (var i=0; i<touches.length; i++) {
+          var touch = touches[i];
+          touch.color = colorForTouch(touch);
+          var idx = ongoingTouchIndexById(touch.identifier);
+
+          ctx.strokeStyle = touch.color;
+          ctx.beginPath();
+          ctx.moveTo(ongoingTouches[i].pageX, ongoingTouches[i].pageY);
+          ctx.lineTo(touch.pageX, touch.pageY);
+          ongoingTouches.splice(i, 1);  // remove it; we're done
+        }
+      }
+
+      function handleCancel(evt) {
+        evt.preventDefault();
+        var touches = evt.changedTouches;
+
+        for (var i=0; i<touches.length; i++) {
+          ongoingTouches.splice(i, 1);  // remove it; we're done
+        }
+      }
+
+
+      function startup() {
+        var el = document.getElementById("canvas");
+        el.addEventListener("touchstart", handleStart, false);
+        el.addEventListener("touchend", handleEnd, false);
+        el.addEventListener("touchcancel", handleCancel, false);
+        el.addEventListener("touchleave", handleEnd, false);
+        el.addEventListener("touchmove", handleMove, false);
+      }
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var headerThreshold = $('.navbar').offset().top;
+
+        function onScroll(e) {
+          if (window.scrollY >= headerThreshold){
+            $('.navbar').removeClass('navbar-transparent').addClass('navbar-fixed-top');
+            $('.navbar:first-child').addClass('navbar-inner');
+          }
+          else {
+            $('.navbar').addClass('navbar-transparent').removeClass('navbar-fixed-top');
+            $('.navbar:first-child').removeClass('navbar-inner');
+          }
+        }
+
+        $(window).resize(function(){
+          var canvas = document.getElementById('canvas');
+
+          canvas.width  = window.innerWidth;
+          canvas.height = window.innerHeight;
+
+          headerThreshold = $('.navbar').offset().top;
+          // $('.navbar:first-child').removeClass('navbar-inner');
+
+          if ($(window).width() <= 979) {
+            $('.navbar').removeClass('navbar-transparent').addClass('navbar-fixed-top');
+            // $('.navbar:first-child').addClass('navbar-inner');
+          }
+          else {
+            $('.navbar').addClass('navbar-transparent').removeClass('navbar-fixed-top');
+            // $('.navbar:first-child').removeClass('navbar-inner');
+          }
+        }).resize();
+
+        $(document).on('scroll', onScroll);
+        startup();
+      });
+    </script>
   </body>
 </html>
