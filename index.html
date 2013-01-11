@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Caress</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Caress - Multitouch Love for All Browsers">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href='http://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-35796697-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <!-- Navbar
+      ================================================== -->
+      <div class="navbar navbar-transparent">
+        <div class="">
+          <div class="container">
+            <ul class="nav nav-pills pull-right">
+              <li class='active'><a href="https://github.com/ekryski/caress-client/tree/master/examples">Examples</a></li>
+              <li class='active'><a href="https://github.com/ekryski/caress-server">Caress Server</a></li>
+              <li class='active'><a href="https://github.com/ekryski/caress-client">Caress Client</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div id="wrap">
+      <div class="container">
+        <div class="row">
+          <div class="span6">
+            <img src="img/caress-logo.png">
+          </div>
+        </div>
+        <div class="row">
+          <div class="span12">
+            <h3 class="tagline">Because all browsers want to be touched...</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="span6 offset3">
+            <iframe width="100%" height="315" src="http://www.youtube.com/embed/q-ZVhy9tTBo" frameborder="0" allowfullscreen></iframe>
+          </div>
+          </div> <!-- ./hero-unit -->
+        </div>
+        <div class="hero-unit">
+        
+        <div class="row">
+          <div id="docs" class="span12">
+<!--             <div class="row">
+            </div> -->
+              <section id="intro">
+                <h1 id="caress">Caress</h1>
+
+                <p><em>Caress</em> is a JavaScript library that converts <a href="http://www.tuio.org">TUIO</a> events to native browser touches as proposed by the <a href="http://dvcs.w3.org/hg/webevents/raw-file/tip/touchevents.html">W3C Touch Events version 2</a>.</p>
+                
+                <h3>Background</h3>
+
+                <p>Thus far touch events have mainly only been supported on some mobile browsers. Firefox (as of version 4) is an exception in the desktop department and supports a mode where you can enable touch support (however it is a bit of a secret). Chrome's emulation of touch support, frankly just doesn't work properly.</p>
+
+                <p>For most of us this doesn't really cut it. I want multi-touch support on my desktop dammit! And across all browsers! This is what the aim of this library is. Using Caress Client + <a href="https://github.com/ekryski/caress-server/">Caress Server</a> + some hardware that spits out TUIO, you too can have multi-touch support in your browser!</p>
+              </section>
+            
+
+            <h2 id="getting-started">Getting Started</h2>
+
+            <h3 id="the-client">The Client</h3>
+
+            <p>You need to include a few client side libraries in your html file. They are:</p>
+
+            <pre>
+              <code>
+                &lt;script type="text/javascript" src="jquery-1.8.1.min.js"&gt;&lt;/script&gt;
+                &lt;script type="text/javascript" src="underscore-1.3.3.min.js"&gt;&lt;/script&gt;
+                &lt;script type="text/javascript" src="socket.io-0.9.10.min.js"&gt;&lt;/script&gt;
+                &lt;script type="text/javascript" src="caress-0.1.0.js"&gt;&lt;/script&gt;
+              </code>
+            </pre>
+
+            <p><em>I'm planning on trying to get rid of the dependency on underscore</em></p>
+
+            <h3 id="the-server">The Server</h3>
+
+            <p>Grab the <a href="https://github.com/ekryski/caress-server/">Caress Server</a> and follow the instructions on the README.</p>
+
+            <p>Short hand: <code>npm install caress-server</code></p>
+
+            <div class="span6">
+              <h2 id="examples">Examples</h2>
+
+              <ul>
+              <li>Option A: <em>See the <a href="https://github.com/ekryski/caress-client/tree/master/examples">examples</a> folder</em></li>
+              <li>Option B:
+              <ul>
+              <li>Download or clone the repo</li>
+              <li><code>cd caress-client</code></li>
+              <li><code>npm install</code></li>
+              <li><code>npm start</code></li>
+              <li>Go to <a href="http://localhost:5000/">http://localhost:5000/</a></li>
+              <li>Start up your TUIO device with port 3333 and play with the examples!</li>
+              </ul></li>
+              </ul>
+            </div>
+            <div class="span6">
+              <h2 id="tuio-input">TUIO Input</h2>
+
+              <p>If you can't wait to try it out there are 3 great FREE options:</p>
+
+              <ul>
+              <li>Download <a href="https://github.com/fajran/tongseng">Tong Seng</a> and get dittling on your Apple trackpad!</li>
+              <li>Download <a href="https://itunes.apple.com/us/app/tuiopad/id412446962">TUIOpad</a> and start stroking your iOS device!</li>
+              <li>Download <a href="https://play.google.com/store/apps/details?id=tuioDroid.impl">TUIOdroid</a> rub your Android the right way!</li>
+              </ul>
+            </div>
+
+            <h2 id="contributing">Contributing</h2>
+
+            <p>I am open to pull requests but make sure you include unit tests with your code.</p>
+
+            <h2 id="credits">Credits</h2>
+
+            <p>Although I did not collaborate with these individuals their work inspired me to create this project:</p>
+
+            <ul>
+            <li>Boris Smus (<a href="https://github.com/borismus/MagicTouch">https://github.com/borismus/MagicTouch</a>)</li>
+            <li>Fajran Iman Rusadi (<a href="https://github.com/fajran/npTuioClient">https://github.com/fajran/npTuioClient</a>)</li>
+            <li>Andy Smith (<a href="https://github.com/termie/node-osc">https://github.com/termie/node-osc</a>)</li>
+            <li>fe9lix (<a href="https://github.com/fe9lix/Tuio.js">https://github.com/fe9lix/Tuio.js</a>)</li>
+            <li>Esteban Ginez (<a href="https://github.com/eginez/MultitouchWebSockets">https://github.com/eginez/MultitouchWebSockets</a>)</li>
+            </ul>
+
+            <h2 id="mit-licensed">MIT Licensed</h2>
+
+            <p>Copyright 2012 Eric Kryski</p>
+
+            <p>Permission is hereby granted, free of charge, to any person obtaining
+            a copy of this software and associated documentation files (the
+            "Software"), to deal in the Software without restriction, including
+            without limitation the rights to use, copy, modify, merge, publish,
+            distribute, sublicense, and/or sell copies of the Software, and to
+            permit persons to whom the Software is furnished to do so, subject to
+            the following conditions:</p>
+
+            <p>The above copyright notice and this permission notice shall be
+            included in all copies or substantial portions of the Software.</p>
+
+            <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+            EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+            MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+            NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+            LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+            OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+            WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+
+          </div>
+        </div> <!-- ./docs -->
+      </div> <!-- ./row -->
+      </div>
+      <div id="push"></div>
+    </div><!-- ./wrap -->
+
+    <!-- Footer
+    ================================================== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="span4">
+            <p>Copyright Eric Kryski <a href="http://twitter.com/ekryski" target="_blank">@ekryski</a></p>
+            <p>Code is <a href="https://github.com/ekryski/caress-client/blob/master/LICENSE" target="_blank">MIT Licensed</a>.</p>
+          </div>
+          <!-- Social
+          ================================================== -->
+          <div class="span8">
+            <ul class="social-buttons">
+              <li>
+                <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=ekryski&amp;repo=caress-client&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+              </li>
+              <li>
+                <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=ekryski&amp;repo=caress-client&amp;type=fork&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+              </li>
+              <li class="tweet-btn">
+                <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://erickryski.com/caress-client" data-text="I just touched my browser with Caress">Tweet</a>
+              </li>
+              <li class="follow-btn">
+                <a href="https://twitter.com/ekryski" class="twitter-follow-button" data-show-count="false">Follow @ekryski</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        var headerThreshold = $('.navbar').offset().top;
+
+        function onScroll(e) {
+          if (window.scrollY >= headerThreshold){
+            $('.navbar').removeClass('navbar-transparent').addClass('navbar-fixed-top');
+            $('.navbar:first-child').addClass('navbar-inner');
+          }
+          else {
+            $('.navbar').addClass('navbar-transparent').removeClass('navbar-fixed-top');
+            $('.navbar:first-child').removeClass('navbar-inner');
+          }
+        }
+
+        $(window).resize(function(){
+
+          headerThreshold = $('.navbar').offset().top;
+          // $('.navbar:first-child').removeClass('navbar-inner');
+
+          if ($(window).width() <= 979) {
+            $('.navbar').removeClass('navbar-transparent').addClass('navbar-fixed-top');
+            $('.navbar:first-child').addClass('navbar-inner');
+          }
+          else {
+            $('.navbar').addClass('navbar-transparent').removeClass('navbar-fixed-top');
+            $('.navbar:first-child').removeClass('navbar-inner');
+          }
+        }).resize();
+
+        $(document).on('scroll', onScroll);
+      });
+    </script>
+  </body>
+</html>
