@@ -1,17 +1,21 @@
 html, body {
   height: 100%;
   background-color: white;
-  background-image: url(../img/debut_light.png);
+  background-image: url('../img/debut_light.png');
   background-repeat: repeat;
   z-index: 0;
   padding: 0;
 }
 
 @font-face {
-  font-family: channel;
-  src: url(../fonts/channel.ttf);
-  src: local('channel');
-  font-weight: 400;
+  font-family: 'channel';
+  src: url('../fonts/channel-webfont.eot');
+  src: url('../fonts/channel-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/channel-webfont.woff') format('woff'),
+       url('../fonts/channel-webfont.ttf') format('truetype'),
+       url('../fonts/channel-webfont.svg#channel_left-slantedregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
 }
 
 h1, h2, h3, h4 {
