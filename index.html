@@ -39,23 +39,21 @@
   </head>
 
   <body>
-    <header>
-      <!-- Navbar
-      ================================================== -->
-      <div class="navbar navbar-transparent">
-        <div class="">
-          <div class="container">
-            <ul class="nav nav-pills pull-right">
-              <li class='active'><a href="https://github.com/ekryski/caress-client/tree/master/examples">Examples</a></li>
-              <li class='active'><a href="https://github.com/ekryski/caress-server">Caress Server</a></li>
-              <li class='active'><a href="https://github.com/ekryski/caress-client">Caress Client</a></li>
-            </ul>
-          </div>
+    <!-- Navbar
+    ================================================== -->
+    <div class="navbar navbar-transparent">
+      <div class="">
+        <div class="container">
+          <ul class="nav nav-pills pull-right">
+            <li class='active'><a href="https://github.com/ekryski/caress-client/tree/master/examples">Examples</a></li>
+            <li class='active'><a href="https://github.com/ekryski/caress-server">Caress Server</a></li>
+            <li class='active'><a href="https://github.com/ekryski/caress-client">Caress Client</a></li>
+          </ul>
         </div>
       </div>
-    </header>
+    </div>
     <div id="wrap">
-      <div class="container">
+      <header class="container">
         <div class="row">
           <div class="span6">
             <img src="img/caress-logo.png">
@@ -63,39 +61,42 @@
         </div>
         <div class="row">
           <div class="span12">
-            <h3 class="tagline">Because all browsers want to be touched...</h3>
+            <h3 class="depth tagline" title="Because all browsers want to be touched...">Because all browsers want to be touched...</h3>
           </div>
         </div>
+      </header>
+        
+      <div class="container">
         <div class="row">
-          <div class="span6 offset3">
+          <div id="screencast" class="span6 offset3">
             <iframe width="100%" height="315" src="http://www.youtube.com/embed/q-ZVhy9tTBo" frameborder="0" allowfullscreen></iframe>
           </div>
-          </div> <!-- ./hero-unit -->
         </div>
-        <div class="hero-unit">
-        
-        <div class="row">
-          <div id="docs" class="span12">
-<!--             <div class="row">
-            </div> -->
-              <section id="intro">
-                <h1 id="caress">Caress</h1>
+      </div>
 
-                <p><em>Caress</em> is a JavaScript library that converts <a href="http://www.tuio.org">TUIO</a> events to native browser touches as proposed by the <a href="http://dvcs.w3.org/hg/webevents/raw-file/tip/touchevents.html">W3C Touch Events version 2</a>.</p>
-                
-                <h3>Background</h3>
+      <div class="container">
+        <div id="docs" class="span12">
+          <div class="row">
+            <h1 id="caress" class="depth" title="Caress">Caress</h1>
+            <hr>
 
-                <p>Thus far touch events have mainly only been supported on some mobile browsers. Firefox (as of version 4) is an exception in the desktop department and supports a mode where you can enable touch support (however it is a bit of a secret). Chrome's emulation of touch support, frankly just doesn't work properly.</p>
-
-                <p>For most of us this doesn't really cut it. I want multi-touch support on my desktop dammit! And across all browsers! This is what the aim of this library is. Using Caress Client + <a href="https://github.com/ekryski/caress-server/">Caress Server</a> + some hardware that spits out TUIO, you too can have multi-touch support in your browser!</p>
-              </section>
+            <p><em>Caress</em> is a JavaScript library that converts <a href="http://www.tuio.org">TUIO</a> events to native browser touches as proposed by the <a href="http://dvcs.w3.org/hg/webevents/raw-file/tip/touchevents.html">W3C Touch Events version 2</a>.</p>
             
+            <h3 class="depth" title="Background">Background</h3>
+            <hr>
 
-            <h2 id="getting-started">Getting Started</h2>
+            <p>Thus far touch events have mainly only been supported on some mobile browsers. Firefox (as of version 4) is an exception in the desktop department and supports a mode where you can enable touch support (however it is a bit of a secret). Chrome's emulation of touch support, frankly just doesn't work properly.</p>
 
-            <h3 id="the-client">The Client</h3>
+            <p>For most of us this doesn't really cut it. I want multi-touch support on my desktop dammit! And across all browsers! This is what the aim of this library is. Using <a href="https://github.com/ekryski/caress-client">Caress Client</a> + <a href="https://github.com/ekryski/caress-server/">Caress Server</a> + <a href="http://multi-touch-screen.com/">some hardware</a> that spits out TUIO, you too can have multi-touch support in your browser!</p>
+          </div>
 
-            <p>You need to include a few client side libraries in your html file. They are:</p>
+          <div class="row">
+            <h2 class="depth" title="Getting Started">Getting Started</h2>
+            <hr>
+
+            <h3 class="depth" title="The Client">The Client</h3>
+
+            <p>Download the <a href="https://github.com/ekryski/caress-client">Caress Client</a>. Then you just need to include a few client side libraries in your html file. They are:</p>
 
             <pre>
               <code>
@@ -108,14 +109,16 @@
 
             <p><em>I'm planning on trying to get rid of the dependency on underscore</em></p>
 
-            <h3 id="the-server">The Server</h3>
+            <h3 class="depth" title="The Server">The Server</h3>
 
             <p>Grab the <a href="https://github.com/ekryski/caress-server/">Caress Server</a> and follow the instructions on the README.</p>
 
             <p>Short hand: <code>npm install caress-server</code></p>
+          </div>
 
+          <div class="row">
             <div class="span6">
-              <h2 id="examples">Examples</h2>
+              <h3 class="depth" title="Examples">Examples</h3>
 
               <ul>
               <li>Option A: <em>See the <a href="https://github.com/ekryski/caress-client/tree/master/examples">examples</a> folder</em></li>
@@ -131,36 +134,41 @@
               </ul>
             </div>
             <div class="span6">
-              <h2 id="tuio-input">TUIO Input</h2>
+              <h3 class="depth" title="T UIO Input">T UIO Input</h3>
 
-              <p>If you can't wait to try it out there are 3 great FREE options:</p>
+              <p>If you can't wait to try it out there are 3 great <span class="bold">FREE</span> options:</p>
 
               <ul>
-              <li>Download <a href="https://github.com/fajran/tongseng">Tong Seng</a> and get dittling on your Apple trackpad!</li>
-              <li>Download <a href="https://itunes.apple.com/us/app/tuiopad/id412446962">TUIOpad</a> and start stroking your iOS device!</li>
-              <li>Download <a href="https://play.google.com/store/apps/details?id=tuioDroid.impl">TUIOdroid</a> rub your Android the right way!</li>
+              <li>Download <a href="https://github.com/fajran/tongseng">Tong Seng</a> and get <span class="bold">diddling</span> on your Apple trackpad!</li>
+              <li>Download <a href="https://itunes.apple.com/us/app/tuiopad/id412446962">TUIOpad</a> and start <span class="bold">stroking</span> your iOS device!</li>
+              <li>Download <a href="https://play.google.com/store/apps/details?id=tuioDroid.impl">TUIOdroid</a>, <span class="bold">rub</span> your Android the right way!</li>
               </ul>
             </div>
+          </div>
 
-            <h2 id="contributing">Contributing</h2>
+          <div class="row">
+            <h3 class="depth" title="Contributing">Contributing</h3>
 
             <p>I am open to pull requests but make sure you include unit tests with your code.</p>
 
-            <h2 id="credits">Credits</h2>
+            <h3 class="depth" title="Credits">Credits</h3>
 
             <p>Although I did not collaborate with these individuals their work inspired me to create this project:</p>
 
             <ul>
-            <li>Boris Smus (<a href="https://github.com/borismus/MagicTouch">https://github.com/borismus/MagicTouch</a>)</li>
-            <li>Fajran Iman Rusadi (<a href="https://github.com/fajran/npTuioClient">https://github.com/fajran/npTuioClient</a>)</li>
-            <li>Andy Smith (<a href="https://github.com/termie/node-osc">https://github.com/termie/node-osc</a>)</li>
-            <li>fe9lix (<a href="https://github.com/fe9lix/Tuio.js">https://github.com/fe9lix/Tuio.js</a>)</li>
-            <li>Esteban Ginez (<a href="https://github.com/eginez/MultitouchWebSockets">https://github.com/eginez/MultitouchWebSockets</a>)</li>
+              <li>Boris Smus (<a href="https://github.com/borismus/MagicTouch">MagicTouch</a>)</li>
+              <li>Fajran Iman Rusadi (<a href="https://github.com/fajran/npTuioClient">npTuioClient</a>)</li>
+              <li>Andy Smith (<a href="https://github.com/termie/node-osc">node-osc</a>)</li>
+              <li>fe9lix (<a href="https://github.com/fe9lix/Tuio.js">Tuio.js</a>)</li>
+              <li>Esteban Ginez (<a href="https://github.com/eginez/MultitouchWebSockets">MultitouchWebSockets</a>)</li>
             </ul>
+          </div>
 
-            <h2 id="mit-licensed">MIT Licensed</h2>
+          <div class="row">
+            <h3 class="depth" title="MIT Licensed">MIT Licensed</h3>
+            <hr>
 
-            <p>Copyright 2012 Eric Kryski</p>
+            <p>&copy; Copyright 2012 Eric Kryski</p>
 
             <p>Permission is hereby granted, free of charge, to any person obtaining
             a copy of this software and associated documentation files (the
@@ -180,11 +188,10 @@
             LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
             OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
             WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
-
           </div>
-        </div> <!-- ./docs -->
-      </div> <!-- ./row -->
+        </div> <!-- ./span12 -->
       </div>
+      
       <div id="push"></div>
     </div><!-- ./wrap -->
 
@@ -194,7 +201,7 @@
       <div class="container">
         <div class="row">
           <div class="span4">
-            <p>Copyright Eric Kryski <a href="http://twitter.com/ekryski" target="_blank">@ekryski</a></p>
+            <p>&copy; Copyright Eric Kryski <a href="http://twitter.com/ekryski" target="_blank">@ekryski</a></p>
             <p>Code is <a href="https://github.com/ekryski/caress-client/blob/master/LICENSE" target="_blank">MIT Licensed</a>.</p>
           </div>
           <!-- Social
@@ -228,31 +235,31 @@
     </script>
     <script type="text/javascript">
       $(document).ready(function(){
-        var headerThreshold = $('.navbar').offset().top;
+        var headerThreshold;
 
         function onScroll(e) {
+          if (headerThreshold == 0) return;
+
           if (window.scrollY >= headerThreshold){
             $('.navbar').removeClass('navbar-transparent').addClass('navbar-fixed-top');
-            $('.navbar:first-child').addClass('navbar-inner');
+            $('.navbar > div').addClass('navbar-inner');
           }
           else {
             $('.navbar').addClass('navbar-transparent').removeClass('navbar-fixed-top');
-            $('.navbar:first-child').removeClass('navbar-inner');
+            $('.navbar > div').removeClass('navbar-inner');
           }
         }
 
         $(window).resize(function(){
-
-          headerThreshold = $('.navbar').offset().top;
-          // $('.navbar:first-child').removeClass('navbar-inner');
-
-          if ($(window).width() <= 979) {
+          if ($(window).width() <= 767) {
+            headerThreshold = 0;
             $('.navbar').removeClass('navbar-transparent').addClass('navbar-fixed-top');
-            $('.navbar:first-child').addClass('navbar-inner');
+            $('.navbar > div').addClass('navbar-inner');
           }
           else {
+            headerThreshold = $('.navbar').offset().top;
             $('.navbar').addClass('navbar-transparent').removeClass('navbar-fixed-top');
-            $('.navbar:first-child').removeClass('navbar-inner');
+            $('.navbar > div').removeClass('navbar-inner');
           }
         }).resize();
 
