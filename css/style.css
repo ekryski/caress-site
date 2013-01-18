@@ -298,3 +298,9 @@ ul.social-buttons {
     font-size: 18px;
   }
 }
+
+@media (max-width: 480px) {
+  .navbar .nav > li {
+    padding: 0 2px 5px;
+  }
+}
