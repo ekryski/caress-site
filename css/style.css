@@ -303,4 +303,8 @@ ul.social-buttons {
   .navbar .nav > li {
     padding: 0 2px 5px;
   }
+
+  .nav-collapse .nav > li > a, .nav-collapse .dropdown-menu a {
+    padding: 10px 10px;
+  }
 }
