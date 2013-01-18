@@ -75,13 +75,13 @@
         <div class="span12">
           <ul class="social-buttons">
             <li>
-              <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=ekryski&amp;repo=caress-client&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+              <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=ekryski&amp;repo=caress-server&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
             </li>
             <li>
-              <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=ekryski&amp;repo=caress-client&amp;type=fork&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
+              <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=ekryski&amp;repo=caress-server&amp;type=fork&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="100px" height="20px"></iframe>
             </li>
             <li class="tweet-btn">
-              <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://erickryski.com/caress-client" data-text="I just touched my browser with Caress">Tweet</a>
+              <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://caressjs.com" data-text="I just touched my browser with #Caress. /cc @ekryski">Tweet</a>
             </li>
             <li class="follow-btn">
               <a href="https://twitter.com/ekryski" class="twitter-follow-button" data-show-count="false">Follow @ekryski</a>
@@ -94,7 +94,7 @@
     <div class="container-fluid">
       <div class="row-fluid">
         <div id="screencast" class="span10 offset1">
-          <iframe width="100%" height="315" src="http://www.youtube.com/embed/q-ZVhy9tTBo" frameborder="0" allowfullscreen onclick="_gaq.push(['_trackEvent', 'Caress actions', 'Play', 'Play Video']);"></iframe>
+          <iframe width="100%" height="50%" src="http://www.youtube.com/embed/q-ZVhy9tTBo" frameborder="0" allowfullscreen onclick="_gaq.push(['_trackEvent', 'Caress actions', 'Play', 'Play Video']);"></iframe>
         </div>
       </div>
     </div>
@@ -111,9 +111,9 @@
 
           <p>Thus far touch events have mainly only been supported on some mobile browsers. Firefox (as of version 4) is an exception in the desktop department and supports a mode where you can enable touch support (however it is a bit of a secret). Chrome's emulation of touch support, frankly just doesn't work properly.</p>
 
-          <p>For most of us this doesn't really cut it. I want multi-touch support on my desktop dammit! And across all browsers! This is what the aim of this library is. Using <a href="https://github.com/ekryski/caress-client">Caress Client</a> + <a href="https://github.com/ekryski/caress-server/">Caress Server</a> + <a href="http://multi-touch-screen.com/">some hardware</a> that spits out TUIO, you too can have multi-touch support in your browser!</p>
+          <p>For most of us this doesn't really cut it. I want multi-touch support on my desktop dammit! And across all browsers! This is what the aim of this library is. Using <a href="https://github.com/ekryski/caress-client" target="_blank">Caress Client</a> + <a href="https://github.com/ekryski/caress-server/" target="_blank">Caress Server</a> + <a href="http://multi-touch-screen.com/" target="_blank">some hardware</a> that spits out TUIO, you too can have multi-touch support in your browser!</p>
 
-          <p><em>Caress</em> is a JavaScript library that converts <a href="http://www.tuio.org">TUIO</a> events to native browser touches as proposed by the <a href="http://dvcs.w3.org/hg/webevents/raw-file/tip/touchevents.html">W3C Touch Events version 2</a>.</p>
+          <p><em>Caress</em> is a JavaScript library that converts <a href="http://www.tuio.org" target="_blank">TUIO</a> events to native browser touches as proposed by the <a href="http://dvcs.w3.org/hg/webevents/raw-file/tip/touchevents.html" target="_blank">W3C Touch Events version 2</a>.</p>
         </div>
       </div>
 
@@ -124,22 +124,23 @@
 
           <p>If you have a Mac Trackpad you are in luck:</p>
           <ol>
-            <li>Install <a href="http://nodejs.org">NodeJS</a></li>
-            <li>Download <a href="https://github.com/fajran/tongseng">Tong Seng</a></li>
-            <li>Grab the <a href="https://github.com/ekryski/caress-server/">Caress Server</a> or <code>npm install caress-server</code></li>
+            <li>Install <a href="http://nodejs.org" target="_blank">NodeJS</a></li>
+            <li>Download <a href="https://github.com/fajran/tongseng" target="_blank">Tong Seng</a></li>
+            <li>Create a directory and cd into it. <code>mkdir ~/caress; cd ~/caress</code></li>
+            <li>Grab the <a href="https://github.com/ekryski/caress-server/" target="_blank">Caress Server</a> or <code>npm install caress-server</code></li>
             <li><code>cd /path/to/node_modules/caress-server</code></li>
             <li><code>npm install</code></li>
             <li><code>npm start</code></li>
             <li>Open and start Tong Seng</li>
-            <li>Open <a href="http://localhost:5000/">http://localhost:5000/</a> in your favourite browser and check out the examples!</li>
+            <li>Open <a href="http://localhost:5000/" target="_blank">http://localhost:5000/</a> in your favourite browser and check out the examples!</li>
           </ol>
           <br>
           <p>If you have an Android or iOS device, omit step 2 and:</p>
 
           <ul>
-            <li>Download <a href="https://itunes.apple.com/us/app/tuiopad/id412446962">TUIOpad</a> and start <span class="bold">stroking</span> your iOS device!</li>
+            <li>Download <a href="https://itunes.apple.com/us/app/tuiopad/id412446962" target="_blank">TUIOpad</a> and start <span class="bold">stroking</span> your iOS device!</li>
             <li class="no-bullet">or</li>
-            <li>Download <a href="https://play.google.com/store/apps/details?id=tuioDroid.impl">TUIOdroid</a> and <span class="bold">rub</span> your Android the right way!</li>
+            <li>Download <a href="https://play.google.com/store/apps/details?id=tuioDroid.impl" target="_blank">TUIOdroid</a> and <span class="bold">rub</span> your Android the right way!</li>
           </ul>
         </div>
       </div>
@@ -152,11 +153,11 @@
 
           <h4 class="depth" title="The Server">The Server</h4>
 
-          <p>Grab the <a href="https://github.com/ekryski/caress-server/">Caress Server</a>, <code>npm install caress-server</code> and follow the instructions on the <a href="https://github.com/ekryski/caress-server/blob/master/README.md">README</a>.</p>
+          <p>Grab the <a href="https://github.com/ekryski/caress-server/" target="_blank">Caress Server</a>, <code>npm install caress-server</code> and follow the instructions on the <a href="https://github.com/ekryski/caress-server/blob/master/README.md" target="_blank">README</a>.</p>
 
           <h4 class="depth" title="The Client">The Client</h4>
 
-          <p>Download the <a href="https://github.com/ekryski/caress-client">Caress Client</a>. Then you just need to include a few client side libraries in your html file. They are:</p>
+          <p>Download the <a href="https://github.com/ekryski/caress-client" target="_blank">Caress Client</a>. Then you just need to include a few client side libraries in your html file. They are:</p>
 
           <pre>
             <code data-language="javasript">
@@ -184,7 +185,7 @@
 
           <h4 class="depth" title="Get a TUIO Device">Get a TUIO Device</h4>
 
-          You can buy hardware that speaks TUIO <a href="http://multi-touch-screen.com/">here</a> or you can find things that emulate TUIO <a href="http://www.tuio.org/?software">here</a>.
+          You can buy hardware that speaks TUIO <a href="http://multi-touch-screen.com/" target="_blank">here</a> or you can find things that emulate TUIO <a href="http://www.tuio.org/?software" target="_blank">here</a>.
         </div>
       </div>
 
@@ -198,15 +199,18 @@
           <hr>
           <h3 class="depth" title="Credits">Credits</h3>
 
+          <ul>
+            <li>David Luecke <a href="https://twitter.com/daffl" target="_blank">@daffl</a> (Sounding board and contributions)</li>
+          </ul>
+
           <p>Although I did not collaborate with these individuals their work inspired me to create this project:</p>
 
           <ul>
-            <li>David Luecke <a href="https://twitter.com/daffl">@daffl</a> (Sounding board and contributions)
-            <li>Boris Smus (<a href="https://github.com/borismus/MagicTouch">MagicTouch</a>)</li>
-            <li>Fajran Iman Rusadi (<a href="https://github.com/fajran/npTuioClient">npTuioClient</a>)</li>
-            <li>Andy Smith (<a href="https://github.com/termie/node-osc">node-osc</a>)</li>
-            <li>fe9lix (<a href="https://github.com/fe9lix/Tuio.js">Tuio.js</a>)</li>
-            <li>Esteban Ginez (<a href="https://github.com/eginez/MultitouchWebSockets">MultitouchWebSockets</a>)</li>
+            <li>Boris Smus (<a href="https://github.com/borismus/MagicTouch" target="_blank">MagicTouch</a>)</li>
+            <li>Fajran Iman Rusadi (<a href="https://github.com/fajran/npTuioClient" target="_blank">npTuioClient</a>)</li>
+            <li>Andy Smith (<a href="https://github.com/termie/node-osc" target="_blank">node-osc</a>)</li>
+            <li>fe9lix (<a href="https://github.com/fe9lix/Tuio.js" target="_blank">Tuio.js</a>)</li>
+            <li>Esteban Ginez (<a href="https://github.com/eginez/MultitouchWebSockets" target="_blank">MultitouchWebSockets</a>)</li>
           </ul>
         </div>
       </div>
