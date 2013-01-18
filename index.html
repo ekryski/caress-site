@@ -28,7 +28,7 @@
 
     <script type="text/javascript">
       var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-35796697-1']);
+      _gaq.push(['_setAccount', 'UA-35796697-2']);
       _gaq.push(['_trackPageview']);
 
       (function() {
@@ -87,139 +87,148 @@
     <div class="container-fluid">
       <div class="row-fluid">
         <div id="screencast" class="span10 offset1">
-          <iframe width="100%" height="315" src="http://www.youtube.com/embed/q-ZVhy9tTBo" frameborder="0" allowfullscreen></iframe>
+          <iframe width="100%" height="315" src="http://www.youtube.com/embed/q-ZVhy9tTBo" frameborder="0" allowfullscreen onclick="_gaq.push(['_trackEvent', 'Caress actions', 'Play', 'Play Video']);"></iframe>
         </div>
       </div>
     </div>
 
     <div id="docs" class="container-fluid">
       <div class="row-fluid">
-        <p class="button">
-          <a id="download" class="btn btn-primary btn-large" href="">Download Caress</a>
-        </p>
-        <hr>
+        <div class="span10 offset1">
+          <p class="button">
+            <a id="download" class="btn btn-primary btn-large" href="http://caressjs.com/downloads/caress-0.1.0.min.js" target="_blank" onclick="_gaq.push(['_trackEvent', 'Caress actions', 'Download', 'Download 0.1.0']);">Download Caress</a>
+          </p>
+          <hr>
 
-        <h3 class="depth" title="Background">Background</h3>
+          <h3 class="depth" title="Background">Background</h3>
 
-        <p>Thus far touch events have mainly only been supported on some mobile browsers. Firefox (as of version 4) is an exception in the desktop department and supports a mode where you can enable touch support (however it is a bit of a secret). Chrome's emulation of touch support, frankly just doesn't work properly.</p>
+          <p>Thus far touch events have mainly only been supported on some mobile browsers. Firefox (as of version 4) is an exception in the desktop department and supports a mode where you can enable touch support (however it is a bit of a secret). Chrome's emulation of touch support, frankly just doesn't work properly.</p>
 
-        <p>For most of us this doesn't really cut it. I want multi-touch support on my desktop dammit! And across all browsers! This is what the aim of this library is. Using <a href="https://github.com/ekryski/caress-client">Caress Client</a> + <a href="https://github.com/ekryski/caress-server/">Caress Server</a> + <a href="http://multi-touch-screen.com/">some hardware</a> that spits out TUIO, you too can have multi-touch support in your browser!</p>
+          <p>For most of us this doesn't really cut it. I want multi-touch support on my desktop dammit! And across all browsers! This is what the aim of this library is. Using <a href="https://github.com/ekryski/caress-client">Caress Client</a> + <a href="https://github.com/ekryski/caress-server/">Caress Server</a> + <a href="http://multi-touch-screen.com/">some hardware</a> that spits out TUIO, you too can have multi-touch support in your browser!</p>
 
-        <p><em>Caress</em> is a JavaScript library that converts <a href="http://www.tuio.org">TUIO</a> events to native browser touches as proposed by the <a href="http://dvcs.w3.org/hg/webevents/raw-file/tip/touchevents.html">W3C Touch Events version 2</a>.</p>
+          <p><em>Caress</em> is a JavaScript library that converts <a href="http://www.tuio.org">TUIO</a> events to native browser touches as proposed by the <a href="http://dvcs.w3.org/hg/webevents/raw-file/tip/touchevents.html">W3C Touch Events version 2</a>.</p>
+        </div>
       </div>
 
       <div class="row-fluid">
-        <hr>
-        <h2 class="depth" title="Getting Started">Getting Started</h2>
+        <div class="span10 offset1">
+          <hr>
+          <h2 class="depth" title="Getting Started">Getting Started</h2>
 
-        <p>If you have a Mac Trackpad you are in luck:</p>
-        <ol>
-          <li>Install <a href="http://nodejs.org">NodeJS</a></li>
-          <li>Download <a href="https://github.com/fajran/tongseng">Tong Seng</a></li>
-          <li>Grab the <a href="https://github.com/ekryski/caress-server/">Caress Server</a> or <code>npm install caress-server</code></li>
-          <li><code>cd /path/to/node_modules/caress-server</code></li>
-          <li><code>npm install</code></li>
-          <li><code>npm start</code></li>
-          <li>Open and start Tong Seng</li>
-          <li>Open <a href="http://localhost:5000/">http://localhost:5000/</a> in your favourite browser and check out the examples!</li>
-        </ol>
-        <br>
-        <p>If you have an Android or iOS device, omit step 2 and:</p>
+          <p>If you have a Mac Trackpad you are in luck:</p>
+          <ol>
+            <li>Install <a href="http://nodejs.org">NodeJS</a></li>
+            <li>Download <a href="https://github.com/fajran/tongseng">Tong Seng</a></li>
+            <li>Grab the <a href="https://github.com/ekryski/caress-server/">Caress Server</a> or <code>npm install caress-server</code></li>
+            <li><code>cd /path/to/node_modules/caress-server</code></li>
+            <li><code>npm install</code></li>
+            <li><code>npm start</code></li>
+            <li>Open and start Tong Seng</li>
+            <li>Open <a href="http://localhost:5000/">http://localhost:5000/</a> in your favourite browser and check out the examples!</li>
+          </ol>
+          <br>
+          <p>If you have an Android or iOS device, omit step 2 and:</p>
 
-        <ul>
-          <li>Download <a href="https://itunes.apple.com/us/app/tuiopad/id412446962">TUIOpad</a> and start <span class="bold">stroking</span> your iOS device!</li>
-          <li class="no-bullet">or</li>
-          <li>Download <a href="https://play.google.com/store/apps/details?id=tuioDroid.impl">TUIOdroid</a> and <span class="bold">rub</span> your Android the right way!</li>
-        </ul>
+          <ul>
+            <li>Download <a href="https://itunes.apple.com/us/app/tuiopad/id412446962">TUIOpad</a> and start <span class="bold">stroking</span> your iOS device!</li>
+            <li class="no-bullet">or</li>
+            <li>Download <a href="https://play.google.com/store/apps/details?id=tuioDroid.impl">TUIOdroid</a> and <span class="bold">rub</span> your Android the right way!</li>
+          </ul>
+        </div>
       </div>
 
       <div class="row-fluid">
-        <hr>
-        <h2 class="depth" title="Caressing Your Site">Caressing Your Site</h2>
+        <div class="span10 offset1">
+          <hr>
+          <h2 class="depth" title="Caressing Your Site">Caressing Your Site</h2>
 
-        <h3 class="depth" title="The Server">The Server</h3>
+          <h3 class="depth" title="The Server">The Server</h3>
 
-        <p>Grab the <a href="https://github.com/ekryski/caress-server/">Caress Server</a>, <code>npm install caress-server</code> and follow the instructions on the <a href="https://github.com/ekryski/caress-server/blob/master/README.md">README</a>.</p>
+          <p>Grab the <a href="https://github.com/ekryski/caress-server/">Caress Server</a>, <code>npm install caress-server</code> and follow the instructions on the <a href="https://github.com/ekryski/caress-server/blob/master/README.md">README</a>.</p>
 
-        <h3 class="depth" title="The Client">The Client</h3>
+          <h3 class="depth" title="The Client">The Client</h3>
 
-        <p>Download the <a href="https://github.com/ekryski/caress-client">Caress Client</a>. Then you just need to include a few client side libraries in your html file. They are:</p>
+          <p>Download the <a href="https://github.com/ekryski/caress-client">Caress Client</a>. Then you just need to include a few client side libraries in your html file. They are:</p>
 
-        <pre>
-          <code data-language="javasript">
-            &lt;script type="text/javascript" src="socket.io-0.9.10.min.js"&gt;&lt;/script&gt;
+          <pre>
+            <code data-language="javasript">
+              &lt;script type="text/javascript" src="socket.io-0.9.10.min.js"&gt;&lt;/script&gt;
 
-            &lt;script type="text/javascript" src="caress-0.1.0.js"&gt;&lt;/script&gt;
-          </code>
-        </pre>
+              &lt;script type="text/javascript" src="caress-0.1.0.js"&gt;&lt;/script&gt;
+            </code>
+          </pre>
 
-        <p>Then initialize the client and start binding touch events at will!</p>
+          <p>Then initialize the client and start binding touch events at will!</p>
 
-        <pre>
-          <code data-language="javasript">
-            &lt;script&gt;
-              $(function() {
-                  window.client = new Caress.Client({
-                      host: 'localhost',
-                      port: 5000
-                  });
-                  client.connect();
-              });
-            &lt;/script&gt;
-          </code>
-        </pre>
+          <pre>
+            <code data-language="javasript">
+              &lt;script&gt;
+                $(function() {
+                    window.client = new Caress.Client({
+                        host: 'localhost',
+                        port: 5000
+                    });
+                    client.connect();
+                });
+              &lt;/script&gt;
+            </code>
+          </pre>
 
-        <h3 class="depth" title="Get a TUIO Device">Get a TUIO Device</h3>
+          <h3 class="depth" title="Get a TUIO Device">Get a TUIO Device</h3>
 
-        You can buy hardware that speaks TUIO <a href="http://multi-touch-screen.com/">here</a> or you can find things that emulate TUIO <a href="http://www.tuio.org/?software">here</a>.
-
+          You can buy hardware that speaks TUIO <a href="http://multi-touch-screen.com/">here</a> or you can find things that emulate TUIO <a href="http://www.tuio.org/?software">here</a>.
+        </div>
       </div>
 
       <div class="row-fluid">
-        <hr>
-        <h2 class="depth" title="Contributing">Contributing</h2>
+        <div class="span10 offset1">
+          <hr>
+          <h2 class="depth" title="Contributing">Contributing</h2>
 
-        <p>I would <span class="bold">Love</span> to have pull requests but make sure you include unit tests with your code.</p>
+          <p>I would <span class="bold">Love</span> to have pull requests but make sure you include unit tests with your code.</p>
 
-        <hr>
-        <h2 class="depth" title="Credits">Credits</h2>
+          <hr>
+          <h2 class="depth" title="Credits">Credits</h2>
 
-        <p>Although I did not collaborate with these individuals their work inspired me to create this project:</p>
+          <p>Although I did not collaborate with these individuals their work inspired me to create this project:</p>
 
-        <ul>
-          <li>David Luecke <a href="https://twitter.com/daffl">@daffl</a> (Sounding board and contributions)
-          <li>Boris Smus (<a href="https://github.com/borismus/MagicTouch">MagicTouch</a>)</li>
-          <li>Fajran Iman Rusadi (<a href="https://github.com/fajran/npTuioClient">npTuioClient</a>)</li>
-          <li>Andy Smith (<a href="https://github.com/termie/node-osc">node-osc</a>)</li>
-          <li>fe9lix (<a href="https://github.com/fe9lix/Tuio.js">Tuio.js</a>)</li>
-          <li>Esteban Ginez (<a href="https://github.com/eginez/MultitouchWebSockets">MultitouchWebSockets</a>)</li>
-        </ul>
+          <ul>
+            <li>David Luecke <a href="https://twitter.com/daffl">@daffl</a> (Sounding board and contributions)
+            <li>Boris Smus (<a href="https://github.com/borismus/MagicTouch">MagicTouch</a>)</li>
+            <li>Fajran Iman Rusadi (<a href="https://github.com/fajran/npTuioClient">npTuioClient</a>)</li>
+            <li>Andy Smith (<a href="https://github.com/termie/node-osc">node-osc</a>)</li>
+            <li>fe9lix (<a href="https://github.com/fe9lix/Tuio.js">Tuio.js</a>)</li>
+            <li>Esteban Ginez (<a href="https://github.com/eginez/MultitouchWebSockets">MultitouchWebSockets</a>)</li>
+          </ul>
+        </div>
       </div>
 
       <div class="row-fluid">
-        <hr>
-        <h2 class="depth" title="MIT Licensed">MIT Licensed</h2>
+        <div class="span10 offset1">
+          <hr>
+          <h2 class="depth" title="MIT Licensed">MIT Licensed</h2>
 
-        <p>&copy; Copyright 2012 Eric Kryski</p>
+          <p>&copy; Copyright 2012 Eric Kryski</p>
 
-        <p>Permission is hereby granted, free of charge, to any person obtaining
-        a copy of this software and associated documentation files (the
-        "Software"), to deal in the Software without restriction, including
-        without limitation the rights to use, copy, modify, merge, publish,
-        distribute, sublicense, and/or sell copies of the Software, and to
-        permit persons to whom the Software is furnished to do so, subject to
-        the following conditions:</p>
+          <p>Permission is hereby granted, free of charge, to any person obtaining
+          a copy of this software and associated documentation files (the
+          "Software"), to deal in the Software without restriction, including
+          without limitation the rights to use, copy, modify, merge, publish,
+          distribute, sublicense, and/or sell copies of the Software, and to
+          permit persons to whom the Software is furnished to do so, subject to
+          the following conditions:</p>
 
-        <p>The above copyright notice and this permission notice shall be
-        included in all copies or substantial portions of the Software.</p>
+          <p>The above copyright notice and this permission notice shall be
+          included in all copies or substantial portions of the Software.</p>
 
-        <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-        EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-        MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-        NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
-        LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
-        OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
-        WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+          <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+          EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+          MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+          NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+          LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+          OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+          WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+        </div>
       </div>
     </div>
 
