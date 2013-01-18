@@ -238,7 +238,7 @@ footer .container-fluid {
 }
 
 #screencast > iframe {
-  min-height: 480px;
+  height: 480px;
 }
 
 span.bold {
@@ -292,7 +292,7 @@ ul.social-buttons {
   }
 
   #screencast > iframe {
-    min-height: 340px;
+    height: 480px;
   }
 }
 
@@ -316,5 +316,9 @@ ul.social-buttons {
 
   .nav-collapse .nav > li > a, .nav-collapse .dropdown-menu a {
     padding: 10px 15px;
+  }
+
+  #screencast > iframe {
+    height: 320px;
   }
 }
