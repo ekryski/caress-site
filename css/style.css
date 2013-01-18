@@ -301,7 +301,7 @@ ul.social-buttons {
 
 @media (max-width: 480px) {
   .navbar .nav > li {
-    padding: 0 2px 5px;
+    padding: 5px 2px;
   }
 
   .nav-collapse .nav > li > a, .nav-collapse .dropdown-menu a {
